@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioLinks VCard Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vcard Generator</h1>
+    <form id="vcardForm">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" required>
+         
+        <label for="middlename">Middle Initial:</label>
+        <input type="text" id="middlename">
+        
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="last name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" required>
+
+        <label for="company">Company/Organization:</label>
+        <input type="text" id="company">
+
+        <label for="companyurl">Company URL:</label>
+        <input type="url" id="companyurl">
+
+        <label for="position">Position/Role:</label>
+        <input type="text" id="position">
+
+        <label for="position">Position/Role:</label>
+        <input type="text" id="position">
+
+
+
+
+        <button type="button" onclick="generateVCard()">Generate VCard</button>
+    </form>
+
+    <script>
+        function generateVCard() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+
+            var vcardContent = `BEGIN:VCARD
+VERSION:3.0
+FN:${name}
+EMAIL:${email}
+TEL:${phone}
+END:VCARD`;
+
+            var blob = new Blob([vcardContent], { type: 'text/vcard' });
+            var link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = `${name.replace(/\s+/g, '_').toLowerCase()}_contact.vcf`;
+            link.click();
+        }
+    </script>
+</body>
+</html>
