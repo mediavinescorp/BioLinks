@@ -1,8 +1,15 @@
-TEL;TYPE=cell:818-310-6426
-TEL;TYPE=work:818-855-1341
-TEL;TYPE=fax:818-322-1285
+BEGIN:VCARD
+VERSION:3.0
+FN:Jackqueline Navarro
+N:Navarro;Jackqueline;;;
+TITLE:Office Manager
+ORG:Law Office of David M. Slater
+TEL;TYPE=CELL,VOICE:818-310-6426
+TEL;TYPE=WORK,VOICE:818-855-1341
+TEL;TYPE=FAX:818-322-1285
+EMAIL:Jackie@davidslaterlawfirm.com
 URL:https://www.davidslater.com
-URL;TYPE=profile:https://biolinks.mediavines.com/jackquelinenavarro
-ADR;TYPE=work:;;14545 Victory Blvd Ste 504;Van Nuys;CA;91411;USA
+URL;TYPE=PROFILE:https://biolinks.mediavines.com/jackquelinenavarro
+ADR;TYPE=WORK:;;14545 Victory Blvd Ste 504;Van Nuys;CA;91411;USA
 NOTE:Practice Areas: Personal Injury | Criminal Defense | Workers' Compensation\nTagline: Justice For All!
 END:VCARD
